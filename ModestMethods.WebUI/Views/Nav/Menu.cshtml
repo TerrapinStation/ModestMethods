@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ModestMethods.Domain.Entities.Category>
+
+@Html.ActionLink("Latest Posts", "PostList", "Blog")
+
+
+@foreach (var link in Model)
+{
+    if (link.Name == "Recipes")
+    {
+        string title = (string)ViewContext.RouteData.Values["title"];
+        @Html.RouteLink(link.Name, new
+   {
+       controller = "Blog",
+       action = "Post",
+       title = "recipeindex"
+   },
+   new
+   {
+       @class = title == "recipeindex" ? "selected" : null
+   });
+    }
+    else
+    {
+        @Html.RouteLink(link.Name, new
+   {
+       controller = "Blog",
+       action = "PostList",
+       category = link.UrlSlug.Trim(),
+       page = 1
+   },
+   new
+   {
+       @class = link.Name.Trim() == ViewBag.SelectedCategory ? "selected" : null
+   });
+    }
+}

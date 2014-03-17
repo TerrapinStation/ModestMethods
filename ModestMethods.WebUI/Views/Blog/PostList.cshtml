@@ -1,0 +1,24 @@
+﻿@model ModestMethods.WebUI.Models.PostsListViewModel
+
+@{
+    ViewBag.Title = (Model.CurrentCategory == null) ? "Modest Methods" : Model.CurrentCategory;
+}
+
+@if (Model.Posts.Count() == 0)
+{
+    <div>No posts available for @ViewBag.Title.</div>
+}
+else
+{
+    foreach (var p in Model.Posts)
+    {
+        Html.RenderPartial("PostPartial", p);
+    }
+}
+
+@if (Model.Posts.Count() != 0)
+{
+    <div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("PostList", new { page = x, category = Model.CategoryName }))
+    </div>
+}

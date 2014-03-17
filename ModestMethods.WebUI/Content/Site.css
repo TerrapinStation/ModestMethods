@@ -1,0 +1,312 @@
+﻿html{
+    height: 100%;
+}
+body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    background-image: url(/Content/Images/background2.jpg);
+    margin: 0;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 4.688em;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for the main layout page and partial pages
+-----------------------------------------------------------*/
+DIV#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em;
+    height: 100%;
+}
+
+DIV.item H3, DIV.item H4, DIV.pager A {
+    font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+}
+DIV#header {
+    background-image: url(/Content/Images/background6.jpg);
+    background-color: silver;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid #111;
+    color: Black;
+    height: 12.5em;
+    text-align: center;
+    margin-top: 0.313em;
+}
+
+DIV.title {
+        font-family: "Algerian", "Franklin Gothic Medium", Arial;
+        font-size: 6.250em;
+        text-align: center;
+        border-color: black;
+        color: white;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+DIV.subtitle {
+    color:white;
+    text-align:left;
+    font-size: 1.563em;
+    margin-left: 2.5em;
+    margin-right: auto;
+    margin-top: -1em;
+}
+.loginlink {
+    text-align:right;
+    margin-left:auto;
+    margin-right:auto;
+    width:60em;
+    margin-top: 2.5em;
+    text-decoration: none;
+    color: white;
+}
+div#backHome {
+    text-align:right;
+}
+
+DIV#links {
+        font: bold 2em "Arial Narrow","Franklin Gothic Medium",Arial;
+        color: Black;
+        text-align: right;
+        padding-right: 0.313em;
+        margin-top: 0.5em;
+        width: 45%;
+        float: right;
+
+}
+    DIV#links A:link, A:visited {
+        text-decoration: none;
+        padding: 0.313em;
+        color: black;
+    }
+    DIV#links A:hover, A:active {
+        color: white;
+    }
+
+#post-link {
+    color: #6495a5;
+}
+
+DIV.content {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 1em;
+    margin-right: 9.8em;
+    word-wrap:break-word;
+    background-image: url(/Content/Images/cleanPaper.png);
+    background-repeat:repeat;
+    overflow:hidden;
+    border-top: 2px ridge #666;
+    margin-bottom: .7em;
+
+}
+    DIV.content:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+    DIV.content H3 {
+        font-size: 1.3em;
+        margin: 0 0 .25em 0;
+    }
+    DIV.content H4 {
+        font-size: 1.1em;
+        margin: .4em 0 0 0;
+    }
+    div.content img {
+        padding-right: 1em;
+    }
+
+div.clear {
+    background-color: none;
+    height: 1.250em;
+}
+
+.postTitle {
+    text-align: center;
+}
+
+DIV.item {
+    border-top: 2px ridge #666;
+    padding-top: .7em;
+    margin-bottom: .7em;
+    overflow: hidden;
+}
+
+p.metaData {
+    bottom: 0;
+}
+
+DIV.pager {
+    text-align: right;
+    border: 2px ridge #666;
+    background-color: rgba(243, 243, 243, .6);
+    padding: .5em 0 0 0;
+    margin-top: 1em;
+    margin-right: 9.8em;
+
+}
+    DIV.pager A {
+        font-size: 1.1em;
+        color: #666;
+        text-decoration: none;
+        padding-left: .4em;
+        padding-right: .4em;
+        margin-right: .25em;
+        margin-top: -1em;
+        border: 1px solid black;
+    }
+        DIV.pager A:hover {
+            background-color: #9dd2c0;
+        }
+        DIV.pager A.selected {
+            background-color: #9dd2c0;
+            color: White;
+        }
+
+
+
+DIV#categories {
+    float: right;
+    width: 8em;
+    padding: .3em;
+    background-color: #9dd2c0;
+        overflow:hidden;
+}
+
+div#contentWrapper {
+    margin-top: -1em;
+}
+
+DIV#categories A
+{
+    font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; display: block;
+    text-decoration: none; padding: .6em; color: Black;
+    border-bottom: 1px solid black;
+}
+    DIV#categories A.selected {
+        background-color: #0c8daa;
+        color: White;
+    }
+    DIV#categories A:hover {
+        background-color: #0c8daa;
+    }
+    DIV#categories A.selected:hover {
+        background-color: #0c8daa;
+    }
+
+/* Styles for the about page
+-----------------------------------------------------------*/
+DIV.about {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.about p {
+    background-color: rgba(243, 243, 243, .4);
+    margin-right: 8.563em;
+}
+
+/* Styles for the form on the contact page
+-----------------------------------------------------------*/
+.form_settings
+{ margin: 15px 0 0 0;}
+
+.form_settings p
+{ padding: 0 0 20px 0;}
+
+.form_settings span.field
+{ float: left; 
+  width: 100px; 
+  text-align: left;}
+  
+.form_settings input, .form_settings textarea
+{ padding: 5px; 
+  width: 299px; 
+  font: 100% Segoe UI; 
+  border: 1px solid #E5E5DB; 
+  background: #FFF; 
+  color: #47433F;}
+  
+.form_settings .submit
+{ font: 100% Segoe UI; 
+  border: 0; 
+  width: 99px; 
+  margin: 0 0 0 305px; 
+  height: 33px;
+  padding: 2px 0 3px 0;
+  cursor: pointer; 
+  background: #3B3B3B; 
+  color: #FFF;}
+
+.form_settings textarea, .form_settings select
+{ font: 100% Segoe UI; 
+  width: 299px;}
+
+.form_settings select
+{ width: 310px;}
+
+.form_settings .checkbox
+{ margin: 4px 0; 
+  padding: 0; 
+  width: 14px;
+  border: 0;
+  background: none;}

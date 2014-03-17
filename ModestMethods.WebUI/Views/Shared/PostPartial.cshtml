@@ -1,0 +1,21 @@
+﻿@model ModestMethods.Domain.Entities.Post
+<div class="content">
+    <h2 id="post-link">@Html.PostLink(Model)</h2>
+    <div>
+        @Html.Partial("_AddThis")
+    </div>
+    @Html.Raw(Model.Description)
+    <p class="metaData">
+        By: @Model.Author
+
+        @if (Model.Modified != null)
+        {
+            <br />@:Modified On: @Model.Modified
+        }
+        else
+        {
+            <br />@:Posted On: @Model.PostedOn
+        }
+    </p>
+</div>
+<div class="clear"></div>

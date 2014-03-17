@@ -1,0 +1,14 @@
+﻿@model ModestMethods.Domain.Entities.Post
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <h1>@Model.Title</h1>
+    <div>
+        @Html.Partial("_AddThis")
+    </div>
+    <div>@Html.Raw(Model.Content)</div>
+    <div id="backHome">@Html.ActionLink("Back Home", "PostList", "Blog", new { }, new { @class = "loginlink" })</div>
+    <div>@Html.Partial("_Disqus")</div>
+</div>

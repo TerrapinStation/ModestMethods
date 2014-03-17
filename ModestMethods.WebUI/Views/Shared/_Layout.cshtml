@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="loginlink">@Html.ActionLink("Login", "Login", "Admin", new { }, new { @class = "loginlink" }) </div>
+    <div id="main">
+        <div id="header">
+            <div class="title">Modest Methods</div>
+            <div class="subtitle">...one mom's quest for natural, practical homemaking</div>
+            <div id="links">
+                @Html.ActionLink("Home", "PostList", "Blog")
+                @Html.ActionLink("About", "About", "Blog")
+                @Html.ActionLink("Contact", "Contact", "Blog")
+            </div>
+        </div>
+        <div id="categories">
+            @{ Html.RenderAction("Menu", "Nav"); }
+        </div>
+        <div id="contentWrapper">
+            <div>
+                @if (ViewBag.Title == "Modest Methods")
+                {
+                    <h1 class="postTitle">Latest Posts</h1>
+                }
+                else
+                {
+                    <h1 class="postTitle">@ViewBag.Title</h1>
+                }
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
